@@ -1,0 +1,13 @@
+version: 1.0
+services:
+  # 服务名
+  mysql:
+    # 所用镜像
+    image: mysql
+    restart: always
+    ports:
+      - 3306:9906
+    volumes:
+      - /root/wlz_mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
